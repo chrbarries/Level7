@@ -1,0 +1,117 @@
+Section 1
+
+
+1.	You are given a series 1,2,3 … recognize the pattern and write a small piece of php code to print out this series up until infinity (infinite loop).
+
+ $x = 0 ;
+While(true){
+  $x++;
+  echo $x . ", ";
+}
+
+ 	 	
+2.	You are given a series 1,3,6,10 … recognize the pattern and write a small piece of php code to print out this series up until infinity (infinite loop).
+
+ $x = 0;
+ $y = 0;
+While(true){
+    $y++;
+    $x = $x + $y;
+    echo $x . ", ";
+}
+
+3.	Explain what it means to define a class as abstract:
+
+An abstract class is a class that cannot be instantiated, but can be extended to.  
+
+
+4.	Briefly explain the difference between private and protected in terms of OOP:
+
+Private can only be accessed inside that class.
+Protected can be accessed by that class and by the inherited classes derived form there.
+
+
+5.	Define the following php functions:
+
+•	explode
+
+Explode is used to break up a string into an array where the pharse/character is present in the string.
+
+•	stripos
+
+stripos just finds the the first occurance of your specified phrase in the sting given
+  
+•	rtrim
+
+Right trim: trims a specified amount of characters on the right side of a string 
+
+
+
+•	require
+includes the specified file into your scope 
+
+
+•	require_once
+includes the specified file into your scope only once. This resolves errors of including it multiple times. 
+
+    
+ 6. What would the following code output:
+
+for ($i = 0; $i < 5; $i++) {
+	echo $i;
+	continue;
+}
+
+    01234
+
+
+
+
+     7. What would the following code output:
+
+do {
+	echo “1”;
+	
+	continue;
+
+	echo “2”;
+
+	break;
+
+} while (false);
+
+1 (the Continue keyword progreses the do to the while) 
+
+	 	
+8. You are given 2 tables in a database, a user table and a company table.
+
+User
+id
+username
+company_id
+
+
+
+Company
+id
+name
+
+	 	 	
+Write a query to give the following result :
+
+user_name	company_name
+Pete	Pzero
+
+MySQL:
+
+SELECT User.username as "user_name" , Company.name as "company_name"
+From User
+INNER JOIN Company
+ON User.company_id = Company.id
+WHERE username = 'Pete' AND name = "Pzero"
+
+
+10. Briefly describe what JSON is and what php functions you would use to make use of JSON on a day to day basis:
+
+JSON is a text object that is generally used for sending information between applications. It is used as the standard for most web based API's.
+json_encode and json_decode. 
